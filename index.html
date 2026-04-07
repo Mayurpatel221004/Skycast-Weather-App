@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+<header>
+<h1>SkyCast</h1>
+<div class="search">
+<input type="text" id="city" placeholder="Search city">
+<button onclick="getWeather()">Search</button>
+<button onclick="getLocationWeather()">📍</button>
+
+<label class="switch">
+<input type="checkbox" id="themeToggle">
+<span class="slider"></span>
+</label>
+</div>
+</header>
+
+<section class="current">
+<h2 id="cityName"></h2>
+<p id="temp"></p>
+<p id="desc"></p>
+</section>
+
+<h2>Temperature</h2>
+<div id="tempHourly" class="hourly"></div>
+<section class="details">
+<div class="card">💧 Humidity<p id="humidity"></p></div>
+<div class="card">💨 Wind<p id="wind"></p></div>
+<div class="card">🌡 Pressure<p id="pressure"></p></div>
+<div class="card">🌅 Sunrise<p id="sunrise"></p></div>
+<div class="card">🌇 Sunset<p id="sunset"></p></div>
+</section>
+
+<div class="tabs">
+<button onclick="showHourly('wind')">Wind</button>
+<button onclick="showHourly('humidity')">Humidity</button>
+</div>
+
+<div id="hourly" class="hourly"></div>
+<h2>5 Day Forecast</h2>
+<div id="forecast" class="forecast"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
